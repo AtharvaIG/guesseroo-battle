@@ -65,7 +65,7 @@ const GameStatus: React.FC<GameStatusProps> = ({ status, previousGuess }) => {
         {message}
       </h3>
       {detail && (
-        <p className="text-sm text-gray-500 mt-1">{detail}</p>
+        <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">{detail}</p>
       )}
     </div>
   );

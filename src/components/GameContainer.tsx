@@ -61,12 +61,12 @@ const GameContainer: React.FC = () => {
   };
 
   return (
-    <div className="game-container w-full max-w-md mx-auto p-8 shadow-xl hover:shadow-2xl transition-all duration-300">
+    <div className="game-container w-full max-w-md mx-auto p-8 shadow-xl hover:shadow-2xl transition-all duration-300 dark:bg-gray-800/95 dark:border dark:border-gray-700">
       {!gameOver ? (
         <>
           <div className="mb-6 text-center">
-            <div className="text-xs font-medium text-gray-400 uppercase tracking-wider">ROUND</div>
-            <div className="text-xl font-semibold text-gray-700">{round}</div>
+            <div className="text-xs font-medium text-gray-400 dark:text-gray-500 uppercase tracking-wider">ROUND</div>
+            <div className="text-xl font-semibold text-gray-700 dark:text-gray-300">{round}</div>
           </div>
           
           <PlayerIndicator currentPlayer={currentPlayer} />
@@ -75,7 +75,7 @@ const GameContainer: React.FC = () => {
           
           <NumberInput onSubmit={handleGuess} disabled={status === 'correct'} />
           
-          <div className="text-center mt-8 text-sm text-gray-500 bg-gray-50 py-2 px-4 rounded-full border border-gray-100">
+          <div className="text-center mt-8 text-sm text-gray-500 dark:text-gray-400 bg-gray-50 dark:bg-gray-700/30 py-2 px-4 rounded-full border border-gray-100 dark:border-gray-700/50">
             Guess a number between 1 and 100
           </div>
         </>

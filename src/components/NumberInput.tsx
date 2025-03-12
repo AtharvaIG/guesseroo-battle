@@ -49,13 +49,14 @@ const NumberInput: React.FC<NumberInputProps> = ({
           disabled={disabled}
           placeholder="Enter a number"
           className={cn(
-            "w-full h-16 px-4 text-center text-xl font-medium bg-white border-2 rounded-xl",
-            "outline-none transition-all duration-300 placeholder:text-gray-300",
-            "focus:border-game-primary focus:ring-2 focus:ring-game-primary/20",
+            "w-full h-16 px-4 text-center text-xl font-medium bg-white dark:bg-gray-700 border-2 rounded-xl",
+            "outline-none transition-all duration-300 placeholder:text-gray-300 dark:placeholder:text-gray-500",
+            "focus:border-game-primary focus:ring-2 focus:ring-game-primary/20 dark:text-white",
+            "dark:border-gray-600 dark:focus:border-blue-500 dark:focus:ring-blue-500/30",
             disabled ? "opacity-50 cursor-not-allowed" : "game-input",
           )}
         />
-        <div className="absolute -top-2.5 left-3 px-2 text-xs font-medium bg-white text-gray-400">
+        <div className="absolute -top-2.5 left-3 px-2 text-xs font-medium bg-white dark:bg-gray-700 text-gray-400 dark:text-gray-400">
           1-100
         </div>
         <button
@@ -65,7 +66,7 @@ const NumberInput: React.FC<NumberInputProps> = ({
             "absolute right-2 top-2 h-12 px-5 rounded-lg font-medium text-sm",
             "transition-all duration-300 transform",
             !value || disabled
-              ? "bg-gray-100 text-gray-400 cursor-not-allowed"
+              ? "bg-gray-100 dark:bg-gray-600 text-gray-400 dark:text-gray-400 cursor-not-allowed"
               : "bg-gradient-to-r from-game-primary to-game-primary/90 text-white hover:shadow-md hover:-translate-y-0.5 active:translate-y-0"
           )}
         >

@@ -9,7 +9,7 @@ interface PlayerIndicatorProps {
 const PlayerIndicator: React.FC<PlayerIndicatorProps> = ({ currentPlayer }) => {
   return (
     <div className="flex justify-center mb-8">
-      <div className="relative flex rounded-full overflow-hidden h-14 w-72 p-1 bg-gray-100 shadow-inner">
+      <div className="relative flex rounded-full overflow-hidden h-14 w-72 p-1 bg-gray-100 dark:bg-gray-700/50 shadow-inner">
         <div 
           className={cn(
             "absolute inset-y-1 w-1/2 rounded-full transition-all duration-500 ease-out shadow-md",
@@ -21,7 +21,7 @@ const PlayerIndicator: React.FC<PlayerIndicatorProps> = ({ currentPlayer }) => {
         <div 
           className={cn(
             "relative z-10 flex-1 flex items-center justify-center font-medium text-sm transition-all duration-300",
-            currentPlayer === 1 ? "text-white scale-105" : "text-gray-500"
+            currentPlayer === 1 ? "text-white scale-105" : "text-gray-500 dark:text-gray-400"
           )}
         >
           Player 1
@@ -29,7 +29,7 @@ const PlayerIndicator: React.FC<PlayerIndicatorProps> = ({ currentPlayer }) => {
         <div 
           className={cn(
             "relative z-10 flex-1 flex items-center justify-center font-medium text-sm transition-all duration-300",
-            currentPlayer === 2 ? "text-white scale-105" : "text-gray-500"
+            currentPlayer === 2 ? "text-white scale-105" : "text-gray-500 dark:text-gray-400"
           )}
         >
           Player 2
