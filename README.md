@@ -1,69 +1,31 @@
-# Welcome to your Lovable project
+# Higher/Lower Game
 
-## Project info
+## Description
 
-**URL**: https://lovable.dev/projects/017d7457-d4bf-4295-bb75-01c208669f8b
+The Higher/Lower Game is an interactive, multiplayer game where two players compete to guess a randomly generated number between 1 and 100. Players take turns guessing if the next number will be higher or lower than the current one. The game continues until a winner is chosen.
 
-## How can I edit this code?
+## Features
 
-There are several ways of editing your application.
+- **Multiplayer:** Two players can participate in the game.
+- **Random Number Generation:** A number between 1 and 100 is randomly selected.
+- **Turn-Based Gameplay:** Players take turns guessing.
+- **User Interface:** Built using ShadCN UI for components and styled with Tailwind CSS.
+- **Real-Time Updates:** The game's progress updates instantly as players make their guesses.
 
-**Use Lovable**
+## Technologies Used
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/017d7457-d4bf-4295-bb75-01c208669f8b) and start prompting.
+- **Vite** - A next-generation, fast build tool for modern web projects.
+- **TypeScript** - Adds type safety and enhanced developer experience.
+- **React** - A JavaScript library for building user interfaces.
+- **ShadCN UI** - A UI component library for building clean and accessible user interfaces.
+- **Tailwind CSS** - A utility-first CSS framework for rapid UI development.
 
-Changes made via Lovable will be committed automatically to this repo.
+## Installation
 
-**Use your preferred IDE**
+To run the project locally, follow these steps:
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+1. **Clone the repository**:
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with .
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/017d7457-d4bf-4295-bb75-01c208669f8b) and click on Share -> Publish.
-
-## I want to use a custom domain - is that possible?
-
-We don't support custom domains (yet). If you want to deploy your project under your own domain then we recommend using Netlify. Visit our docs for more details: [Custom domains](https://docs.lovable.dev/tips-tricks/custom-domain/)
+   ```bash
+   git clone https://github.com/AtharvaIG/higher-lower-game.git
+   cd higher-lower-game
