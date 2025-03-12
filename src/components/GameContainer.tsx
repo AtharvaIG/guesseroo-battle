@@ -73,10 +73,8 @@ const GameContainer: React.FC = () => {
           
           <GameStatus status={status} previousGuess={previousGuess} />
           
-          <NumberInput onSubmit={handleGuess} disabled={status === 'correct'} />
-          
-          <div className="text-center mt-8 text-sm text-gray-500 dark:text-gray-400 bg-gray-50 dark:bg-gray-700/30 py-2 px-4 rounded-full border border-gray-100 dark:border-gray-700/50">
-            Guess a number between 1 and 100
+          <div className="my-6">
+            <NumberInput onSubmit={handleGuess} disabled={status === 'correct'} />
           </div>
         </>
       ) : (
