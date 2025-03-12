@@ -61,29 +61,24 @@ const GameContainer: React.FC = () => {
   };
 
   return (
-    <div className="game-container w-full max-w-md mx-auto p-6 shadow-xl hover:shadow-2xl transition-all duration-300 dark:bg-gray-800/95 dark:border dark:border-gray-700">
+    <div className="game-container w-full max-w-md mx-auto p-8 shadow-xl hover:shadow-2xl transition-all duration-300 dark:bg-gray-800/95 dark:border dark:border-gray-700">
       {!gameOver ? (
-        <div className="flex flex-col items-center">
-          <div className="mb-4 text-center">
+        <>
+          <div className="mb-6 text-center">
             <div className="text-xs font-medium text-gray-400 dark:text-gray-500 uppercase tracking-wider">ROUND</div>
             <div className="text-xl font-semibold text-gray-700 dark:text-gray-300">{round}</div>
           </div>
           
-          <div className="w-full mb-8">
-            <PlayerIndicator currentPlayer={currentPlayer} />
-          </div>
+          <PlayerIndicator currentPlayer={currentPlayer} />
           
-          <div className="w-full mb-6 text-center">
-            <div className="text-lg font-medium text-gray-600 dark:text-gray-300 mb-4">
-              Make your guess!
-            </div>
-            <GameStatus status={status} previousGuess={previousGuess} />
-          </div>
+          <GameStatus status={status} previousGuess={previousGuess} />
           
-          <div className="w-full">
-            <NumberInput onSubmit={handleGuess} disabled={status === 'correct'} />
+          <NumberInput onSubmit={handleGuess} disabled={status === 'correct'} />
+          
+          <div className="text-center mt-8 text-sm text-gray-500 dark:text-gray-400 bg-gray-50 dark:bg-gray-700/30 py-2 px-4 rounded-full border border-gray-100 dark:border-gray-700/50">
+            Guess a number between 1 and 100
           </div>
-        </div>
+        </>
       ) : (
         <GameOver
           winner={winner!}
