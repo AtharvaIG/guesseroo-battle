@@ -102,11 +102,11 @@
   }
   
   .game-input {
-    @apply transition-all duration-200 focus-within:ring-2 focus-within:ring-game-primary;
+    @apply transition-all duration-200 focus-within:ring-2 focus-within:ring-game-primary/30;
   }
   
   .glass-panel {
-    @apply bg-white/80 backdrop-blur-md border border-white/20 shadow-sm;
+    @apply bg-white/80 backdrop-blur-md border border-white/20 shadow-lg;
   }
 }
 
@@ -116,4 +116,25 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
+}
+
+/* Additional animations */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes pulse-ring {
+  0% { box-shadow: 0 0 0 0 rgba(0, 112, 243, 0.7); }
+  70% { box-shadow: 0 0 0 10px rgba(0, 112, 243, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(0, 112, 243, 0); }
+}
+
+.pulse-ring {
+  animation: pulse-ring 1.5s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
 }

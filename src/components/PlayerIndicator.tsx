@@ -8,26 +8,28 @@ interface PlayerIndicatorProps {
 
 const PlayerIndicator: React.FC<PlayerIndicatorProps> = ({ currentPlayer }) => {
   return (
-    <div className="flex justify-center mb-6">
-      <div className="relative flex rounded-full overflow-hidden h-12 w-64 p-1 bg-gray-100">
+    <div className="flex justify-center mb-8">
+      <div className="relative flex rounded-full overflow-hidden h-14 w-72 p-1 bg-gray-100 shadow-inner">
         <div 
           className={cn(
-            "absolute inset-y-1 w-1/2 rounded-full transition-all duration-500 ease-out",
-            currentPlayer === 1 ? "left-1 bg-game-player1" : "left-[50%] -ml-1 bg-game-player2"
+            "absolute inset-y-1 w-1/2 rounded-full transition-all duration-500 ease-out shadow-md",
+            currentPlayer === 1 
+              ? "left-1 bg-gradient-to-r from-game-player1 to-game-player1/80" 
+              : "left-[50%] -ml-1 bg-gradient-to-r from-game-player2/80 to-game-player2"
           )}
         />
         <div 
           className={cn(
-            "relative z-10 flex-1 flex items-center justify-center font-medium text-sm",
-            currentPlayer === 1 ? "text-white" : "text-game-muted"
+            "relative z-10 flex-1 flex items-center justify-center font-medium text-sm transition-all duration-300",
+            currentPlayer === 1 ? "text-white scale-105" : "text-gray-500"
           )}
         >
           Player 1
         </div>
         <div 
           className={cn(
-            "relative z-10 flex-1 flex items-center justify-center font-medium text-sm",
-            currentPlayer === 2 ? "text-white" : "text-game-muted"
+            "relative z-10 flex-1 flex items-center justify-center font-medium text-sm transition-all duration-300",
+            currentPlayer === 2 ? "text-white scale-105" : "text-gray-500"
           )}
         >
           Player 2

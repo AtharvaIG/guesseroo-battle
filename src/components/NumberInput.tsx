@@ -49,24 +49,24 @@ const NumberInput: React.FC<NumberInputProps> = ({
           disabled={disabled}
           placeholder="Enter a number"
           className={cn(
-            "w-full h-14 px-4 text-center text-lg font-medium bg-white border-2 rounded-xl",
-            "outline-none transition-all duration-200 placeholder:text-gray-300",
-            "focus:border-game-primary focus:shadow-sm",
+            "w-full h-16 px-4 text-center text-xl font-medium bg-white border-2 rounded-xl",
+            "outline-none transition-all duration-300 placeholder:text-gray-300",
+            "focus:border-game-primary focus:ring-2 focus:ring-game-primary/20",
             disabled ? "opacity-50 cursor-not-allowed" : "game-input",
           )}
         />
-        <div className="absolute -top-2.5 left-3 px-1 text-xs font-medium bg-white text-gray-400">
+        <div className="absolute -top-2.5 left-3 px-2 text-xs font-medium bg-white text-gray-400">
           1-100
         </div>
         <button
           type="submit"
           disabled={disabled || !value}
           className={cn(
-            "absolute right-2 top-2 h-10 px-4 rounded-lg font-medium text-sm",
-            "transition-all duration-200 transform",
+            "absolute right-2 top-2 h-12 px-5 rounded-lg font-medium text-sm",
+            "transition-all duration-300 transform",
             !value || disabled
               ? "bg-gray-100 text-gray-400 cursor-not-allowed"
-              : "bg-game-primary text-white hover:bg-game-primary/90 active:scale-95"
+              : "bg-gradient-to-r from-game-primary to-game-primary/90 text-white hover:shadow-md hover:-translate-y-0.5 active:translate-y-0"
           )}
         >
           Guess
